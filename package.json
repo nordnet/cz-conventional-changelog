@@ -1,0 +1,21 @@
+{
+  "name": "@nordnet/cz-conventional-changelog",
+  "version": "1.0.0",
+  "description": "conventional-changelog config for commitizen",
+  "main": "index.js",
+  "homepage": "https://github.com/nordnet/cz-conventional-changelog",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nordnet/cz-conventional-changelog.git"
+  },
+  "author": "Vladimir Starkov <iamstarkov@gmail.com> https://iamstarkov.com",
+  "license": "MIT",
+  "dependencies": {
+    "conventional-commit-types": "^2.0.0",
+    "lodash.map": "^4.5.1",
+    "longest": "^1.0.1",
+    "pad-right": "^0.2.2",
+    "right-pad": "^1.0.1",
+    "word-wrap": "^1.0.3"
+  }
+}
