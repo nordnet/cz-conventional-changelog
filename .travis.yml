@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+  - 8
+script: echo "nothing to see here, move along"
+after_script:
+  - git config --global user.email "nordnet-release@localhost"
+  - git config --global user.name "nordnet-release"
+  - if [ "$TRAVIS_BRANCH" = "master" ] && [ "$TRAVIS_PULL_REQUEST" = "false" ]; git checkout master fi
+  - if [ "$TRAVIS_BRANCH" = "master" ] && [ "$TRAVIS_PULL_REQUEST" = "false" ]; then corp-semantic-release --changelogpreset angular-bitbucket -v; fi
+  - if [ "$TRAVIS_BRANCH" = "master" ] && [ "$TRAVIS_PULL_REQUEST" = "false" ]; then npm publish; fi
+
+
+# blocklist version commits
+branches:
+  except:
+    - /^v[0-9]/

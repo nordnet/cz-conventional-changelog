@@ -1,6 +1,6 @@
 {
   "name": "@nordnet/cz-conventional-changelog",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "description": "conventional-changelog config for commitizen",
   "main": "index.js",
   "homepage": "https://github.com/nordnet/cz-conventional-changelog",
@@ -17,5 +17,9 @@
     "pad-right": "^0.2.2",
     "right-pad": "^1.0.1",
     "word-wrap": "^1.0.3"
+  },
+  "devDependencies": {
+    "conventional-changelog-angular-bitbucket": "^1.1.2",
+    "corp-semantic-release": "^6.4.0"
   }
 }
