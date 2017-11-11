@@ -6,7 +6,7 @@ git config user.email "teamshell@nordnet.se"
 git config user.name "Nordnet Releases"
 git checkout master
 git remote rm origin
-git remote add origin https://nordnet-releases:${GH_TOKEN}@github.com/nordnet/cz-conventional-changelog.git
+git remote add origin https://nordnet-release:${GH_TOKEN}@github.com/nordnet/cz-conventional-changelog.git
 git checkout master
 
 echo "release"
