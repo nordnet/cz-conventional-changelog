@@ -8,6 +8,12 @@
     "type": "git",
     "url": "https://github.com/nordnet/cz-conventional-changelog.git"
   },
+  "scripts": {
+    "release": "corp-semantic-release --changelogpreset angular-bitbucket -v"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "author": "Vladimir Starkov <iamstarkov@gmail.com> https://iamstarkov.com",
   "license": "MIT",
   "dependencies": {
