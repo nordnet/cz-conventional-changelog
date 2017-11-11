@@ -163,11 +163,11 @@ Free text input. **Will be prepended with `Closes issues: ` automatically.**
 MIT © [Nordnet Bank AB](https://www.nordnet.se)
 
 
-[npm-url]: https://npmjs.org/package/@nordnet/conventional-changelog
-[npm-image]: https://img.shields.io/npm/v/@nordnet/conventional-changelog.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/@nordnet/cz-conventional-changelog
+[npm-image]: https://img.shields.io/npm/v/@nordnet/cz-conventional-changelog.svg?style=flat-square
 
-[travis-url]: https://travis-ci.org/nordnet/conventional-changelog
-[travis-image]: https://img.shields.io/travis/nordnet/conventional-changelog.svg?style=flat-square
+[travis-url]: https://travis-ci.org/nordnet/cz-conventional-changelog
+[travis-image]: https://img.shields.io/travis/nordnet/cz-conventional-changelog.svg?style=flat-square
 
-[depstat-url]: https://david-dm.org/nordnet/conventional-changelog
-[depstat-image]: https://david-dm.org/nordnet/conventional-changelog.svg?style=flat-square
+[depstat-url]: https://david-dm.org/nordnet/cz-conventional-changelog
+[depstat-image]: https://david-dm.org/nordnet/cz-conventional-changelog.svg?style=flat-square
