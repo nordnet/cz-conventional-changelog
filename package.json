@@ -9,7 +9,7 @@
     "url": "https://github.com/nordnet/cz-conventional-changelog.git"
   },
   "scripts": {
-    "release": "corp-semantic-release --changelogpreset angular-bitbucket -v"
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "publishConfig": {
     "access": "public"
@@ -25,7 +25,6 @@
     "word-wrap": "^1.0.3"
   },
   "devDependencies": {
-    "conventional-changelog-angular-bitbucket": "^1.1.2",
-    "corp-semantic-release": "^6.4.0"
+    "semantic-release": "^6.3.6"
   }
 }

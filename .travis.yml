@@ -2,12 +2,10 @@ language: node_js
 node_js:
   - 8
 script: echo "nothing to see here, move along"
-deploy:
-  provider: script
-  script: ./deploy.sh
-  skip_cleanup: true
-  on:
-    branch: master
+after_script:
+  - git config --global user.email "nordnet-release@localhost"
+  - git config --global user.name "nordnet-release"
+  - if [ "$TRAVIS_BRANCH" = "master" ] && [ "$TRAVIS_PULL_REQUEST" = "false" ]; then TRAVIS_JOB_NUMBER=WORKAROUND.1 npm run semantic-release; fi
 
 # blocklist version commits
 branches:
