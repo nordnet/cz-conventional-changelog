@@ -7,7 +7,7 @@ var messages = {
   subject: 'Short description:',
   body: 'Longer description (optional):\n',
   breaking: 'BREAKING CHANGE (optional):\n',
-  issues: 'Closes issues (optional):\n',
+  issues: 'Issues (optional):',
 }
 
 module.exports = engine({
