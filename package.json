@@ -22,6 +22,7 @@
     "longest": "^1.0.1",
     "pad-right": "^0.2.2",
     "right-pad": "^1.0.1",
+    "shelljs": "^0.7.8",
     "word-wrap": "^1.0.3"
   },
   "devDependencies": {

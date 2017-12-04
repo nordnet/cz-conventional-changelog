@@ -2,6 +2,7 @@ var wrap = require('word-wrap');
 var map = require('lodash.map');
 var longest = require('longest');
 var rightPad = require('right-pad');
+var extractTicketId = require('./lib/extract-ticket-id');
 
 var filter = function(array) {
   return array.filter(function(x) {
@@ -86,6 +87,7 @@ module.exports = function (options) {
           type: 'input',
           name: 'issues',
           message: messages.issues,
+          default: extractTicketId(),
         }
       ]).then(function(answers) {
 
