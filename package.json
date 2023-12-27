@@ -9,7 +9,7 @@
     "url": "https://github.com/nordnet/cz-conventional-changelog.git"
   },
   "scripts": {
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "semantic-release": "semantic-release"
   },
   "publishConfig": {
     "access": "public"
@@ -26,6 +26,9 @@
     "word-wrap": "1.2.5"
   },
   "devDependencies": {
+    "@semantic-release/github": "^9.2.6",
+    "@semantic-release/npm": "^11.0.2",
+    "@semantic-release/release-notes-generator": "^12.1.0",
     "semantic-release": "22.0.12"
   }
 }

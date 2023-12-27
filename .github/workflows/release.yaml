@@ -1,0 +1,71 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - master
+      - beta
+  pull_request:
+
+env:
+  CI: true
+  GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+jobs:
+  validate:
+    name: "Validate"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: ".nvmrc"
+
+      - name: Install dependencies
+        run: npm ci
+
+      # - name: Run eslint
+      #   run: npm run lint:js
+
+      # - name: Run stylelint
+      #   run: npm run lint:css
+
+      # - name: Run typescript checks
+      #   run: npm run lint:ts
+
+      # - name: Run tests
+      #   run: npm run test-ci
+
+  release:
+    name: "Release"
+    needs: validate
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: ".nvmrc"
+
+      - name: Node and npm version
+        run: node -v && npm -v
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Release
+        if: ${{ github.event_name != 'pull_request' && github.ref == 'refs/heads/master' }}
+        run: npm run semantic-release
+
+      - name: Beta release
+        if: ${{ github.event_name != 'pull_request' && github.ref == 'refs/heads/beta' }}
+        run: npm run semantic-release
