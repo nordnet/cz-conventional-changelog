@@ -17,16 +17,15 @@
   "author": "Vladimir Starkov <iamstarkov@gmail.com> https://iamstarkov.com",
   "license": "MIT",
   "dependencies": {
-    "conventional-commit-types": "^2.0.0",
-    "execa": "^8.0.1",
-    "lodash.map": "^4.5.1",
-    "longest": "^1.0.1",
-    "pad-right": "^0.2.2",
-    "right-pad": "^1.0.1",
-    "shelljs": "^0.7.8",
-    "word-wrap": "^1.0.3"
+    "conventional-commit-types": "3.0.0",
+    "lodash.map": "4.6.0",
+    "longest": "2.0.1",
+    "pad-right": "0.2.2",
+    "right-pad": "1.0.1",
+    "shelljs": "0.8.5",
+    "word-wrap": "1.2.5"
   },
   "devDependencies": {
-    "semantic-release": "^6.3.6"
+    "semantic-release": "22.0.12"
   }
 }
